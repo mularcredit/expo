@@ -77,7 +77,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(11, 102, 35, 0.85) 0%, rgba(51, 1, 188, 0.75) 100%);
+            background: linear-gradient(135deg, rgba(11, 102, 35, 0.354) 0%, rgba(51, 1, 188, 0.299) 100%);
             z-index: 2;
         }
         
@@ -556,7 +556,7 @@
             opacity: 0.8;
         }
         
-        /* SMART IMAGE SYSTEM */
+        /* SMART IMAGE SYSTEM - WITHOUT BADGES */
         .smart-image {
             width: 100%;
             height: 250px;
@@ -582,33 +582,7 @@
             object-fit: cover;
         }
         
-        .smart-image::before {
-            content: attr(data-title);
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(11, 102, 35, 0.9);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: 600;
-            z-index: 2;
-        }
-        
-        .smart-image::after {
-            content: attr(data-description);
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            background: rgba(255,255,255,0.95);
-            padding: 6px 12px;
-            border-radius: 12px;
-            font-size: 11px;
-            color: #666;
-            font-weight: 500;
-            z-index: 2;
-        }
+        /* Removed badge styles for ::before and ::after pseudo-elements */
         
         .image-grid {
             display: grid;
@@ -637,19 +611,7 @@
             object-fit: cover;
         }
         
-        .grid-image::before {
-            content: attr(data-label);
-            position: absolute;
-            top: 8px;
-            left: 8px;
-            background: var(--primary-color);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 10px;
-            font-size: 10px;
-            font-weight: 600;
-            z-index: 2;
-        }
+        /* Removed badge styles for grid-image ::before */
         
         .timeline-item {
             margin: 20px 0;
@@ -884,7 +846,7 @@
         
         <p>The Turkey Expo Kenya 2026 is a four-day national event organized by Pinamba Investment Group of Companies, dedicated to showcasing innovation, creativity, and business opportunities in the turkey clothing and material industry.</p>
         
-        <div class="smart-image" data-title="TURKISH FASHION COLLECTIONS" data-description="Contemporary designs blending Turkish and Kenyan aesthetics">
+        <div class="smart-image">
             <img src="1.png" alt="Turkey Fashion Collections">
         </div>
         
@@ -926,10 +888,10 @@
         <p>Kenya's fashion and textile industry continues to expand, driven by a rising appreciation for local creativity and quality craftsmanship. However, niche segments like turkey-themed fashion and décor materials remain underrepresented in mainstream markets.</p>
         
         <div class="image-grid">
-            <div class="grid-image" data-label="TEXTILE PRODUCTION">
+            <div class="grid-image">
                 <img src="3.png" alt="Textile Production">
             </div>
-            <div class="grid-image" data-label="DESIGN PROCESS">
+            <div class="grid-image">
                 <img src="2.png" alt="Design Process">
             </div>
         </div>
@@ -985,7 +947,7 @@
         <h3 class="subsection">Establishment of Turkey Treasures Mall</h3>
         <p>The Expo aims to pave the way for Turkey Treasures Mall — a modern retail and exhibition complex in Nairobi focused on turkey clothing, materials, carpets, and crafts.</p>
         
-        <div class="smart-image" data-title="TURKEY TREASURES MALL CONCEPT" data-description="Architectural vision for permanent retail and exhibition complex">
+        <div class="smart-image">
             <img src="4.jpg" alt="Turkey Treasures Mall Concept">
         </div>
         
@@ -1053,7 +1015,7 @@
             </div>
         </div>
         
-        <div class="smart-image" data-title="SUSTAINABLE TEXTILE INNOVATION" data-description="Eco-friendly production methods and sustainable fashion practices">
+        <div class="smart-image">
             <img src="5.png" alt="Sustainable Textile Innovation">
         </div>
         
@@ -1076,7 +1038,7 @@
         
         <p>The Expo will feature a comprehensive program designed to engage all stakeholders across the textile and fashion value chain.</p>
         
-        <div class="smart-image" data-title="PREMIUM EXHIBITION SPACE" data-description="Professional booth setups and exhibition hall layout">
+        <div class="smart-image">
             <img src="imgi_16_02-Cr1A2Fpq.jpeg" alt="Premium Exhibition Space">
         </div>
         
@@ -1146,7 +1108,7 @@
             </div>
         </div>
         
-        <div class="smart-image" data-title="INDUSTRY NETWORKING" data-description="Business professionals and industry leaders at networking events">
+        <div class="smart-image">
             <img src="Screenshot (72).png" alt="Industry Networking">
         </div>
         
@@ -1201,7 +1163,7 @@
             </div>
         </div>
         
-        <div class="smart-image" data-title="MARKETING CAMPAIGN" data-description="Digital and outdoor marketing materials and campaigns">
+        <div class="smart-image">
             <img src="Screenshot (77).png" alt="Marketing Campaign">
         </div>
         
@@ -1262,7 +1224,7 @@
             </div>
         </div>
         
-        <div class="smart-image" data-title="EVENT SAFETY & SECURITY" data-description="Professional security and safety measures implementation">
+        <div class="smart-image">
             <img src="Screenshot (60).png" alt="Event Safety & Security">
         </div>
         
@@ -1292,7 +1254,7 @@
             <li>Build lasting personal relationships that translate into sustained trade partnerships</li>
         </ul>
         
-        <div class="smart-image" data-title="MAASAI MARA SAFARI" data-description="Luxury wildlife experience in Kenya's premier game reserve">
+        <div class="smart-image">
             <img src="imgi_60_luxury-safari-trips-to-Kenya-820x269.webp" alt="Maasai Mara Safari">
         </div>
         
@@ -1330,7 +1292,7 @@
         <h3 class="subsection">Phase 2: Coastal Leisure Extension (2 days)</h3>
         <p>After the safari adventure, guests will experience Kenya's stunning Coastal Region for a relaxing and culturally enriching seaside retreat.</p>
         
-        <div class="smart-image" data-title="KENYA'S COASTAL BEAUTY" data-description="Pristine beaches and cultural heritage sites">
+        <div class="smart-image">
             <img src="11.jpg" alt="Kenya's Coastal Beauty">
         </div>
         
@@ -1348,10 +1310,10 @@
         </div>
         
         <div class="image-grid">
-            <div class="grid-image" data-label="BEACH RESORT">
+            <div class="grid-image">
                 <img src="imgi_14_Hemingways-Watamu-Kenya.webp" alt="Beach Resort">
             </div>
-            <div class="grid-image" data-label="DHOW CRUISE">
+            <div class="grid-image">
                 <img src="imgi_2_Tamarind-Dhow-Dinner-Cruise-Mombasa.jpg" alt="Dhow Cruise">
             </div>
         </div>
@@ -1435,7 +1397,7 @@
             </ul>
         </div>
         
-        <div class="smart-image" data-title="NETWORKING EVENTS" data-description="Business networking and partnership building sessions">
+        <div class="smart-image">
             <img src="imgi_56_kenya-luxury-safari-holiday-satao-elerai-amboseli-768x384.jpg" alt="Networking Events">
         </div>
         
