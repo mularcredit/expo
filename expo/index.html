@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turkey Exhibition Kenya 2026 - Complete Business Proposal</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #0B6623;
+            --primary-dark: #084a1a;
+            --primary-light: #1e8c3e;
+            --accent-color: #8B4513;
+            --text-dark: #2c2c2c;
+            --text-medium: #4a4a4a;
+            --text-light: #666;
+            --background-light: #f9f9f9;
+            --border-color: #e8e8e8;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+        }
         
         * {
             margin: 0;
@@ -31,7 +45,7 @@
             overflow: hidden;
         }
         
-        /* COVER DESIGN - FIXED WHITE SPACE */
+        /* COVER DESIGN - ELEGANT & MINIMALIST */
         .cover {
             position: absolute;
             top: 0;
@@ -63,7 +77,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(11, 102, 35, 0.8) 0%, rgba(51, 1, 188, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(11, 102, 35, 0.85) 0%, rgba(51, 1, 188, 0.75) 100%);
             z-index: 2;
         }
         
@@ -95,7 +109,7 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            border: 1px solid rgb(255, 255, 255);
+            border: 1px solid rgba(255, 255, 255, 0.7);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -118,9 +132,9 @@
             font-size: 140px;
             font-weight: 700;
             font-family: 'Cormorant Garamond', serif;
-            color: rgba(255, 255, 255, 0.877);
+            color: rgba(255, 255, 255, 0.9);
             line-height: 1;
-            margin-bottom: -40px;
+            margin-bottom: -20px;
             letter-spacing: -5px;
         }
         
@@ -130,6 +144,7 @@
             font-family: 'Cormorant Garamond', serif;
             line-height: 1.1;
             margin-bottom: 25px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         
         .cover-subtitle {
@@ -162,6 +177,8 @@
             z-index: 4;
             margin-top: auto;
             padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
         }
         
         .cover-info {
@@ -181,55 +198,6 @@
             opacity: 0.6;
         }
         
-        /* CIRCULAR IMAGES */
-        .circular-images {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 4;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 300px;
-        }
-        
-        .circle-container {
-            width: 120px;
-            height: 120px;
-            margin: 10px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid rgba(255,255,255,0.8);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            background: linear-gradient(135deg, #0B6623, #1e7e34);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-            font-weight: 600;
-            text-align: center;
-            padding: 10px;
-        }
-        
-        /* WATERMARK STYLES */
-        .watermark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0.08;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 70% auto;
-        }
-        
         /* TABLE OF CONTENTS */
         .toc-page {
             padding: 70px 60px;
@@ -239,7 +207,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 48px;
             font-weight: 700;
-            color: #0B6623;
+            color: var(--primary-color);
             margin-bottom: 40px;
             text-align: center;
         }
@@ -256,6 +224,13 @@
             padding: 12px 0;
             border-bottom: 1px solid #f0f0f0;
             font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background-color: rgba(11, 102, 35, 0.03);
+            padding-left: 10px;
+            border-bottom-color: var(--primary-color);
         }
         
         .toc-item:last-child {
@@ -264,17 +239,17 @@
         
         .toc-item-main {
             font-weight: 600;
-            color: #2c2c2c;
+            color: var(--text-dark);
         }
         
         .toc-item-sub {
-            color: #666;
+            color: var(--text-light);
             margin-left: 20px;
             font-weight: 400;
         }
         
         .toc-page-number {
-            color: #0B6623;
+            color: var(--primary-color);
             font-weight: 600;
         }
         
@@ -290,7 +265,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, #0B6623 0%, #0a5c1f 100%);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
         }
         
         .page-number {
@@ -307,7 +282,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 42px;
             font-weight: 700;
-            color: #0B6623;
+            color: var(--primary-color);
             margin-bottom: 25px;
             position: relative;
             padding-bottom: 15px;
@@ -320,14 +295,14 @@
             left: 0;
             width: 80px;
             height: 1px;
-            background: linear-gradient(90deg, #0B6623, transparent);
+            background: linear-gradient(90deg, var(--primary-color), transparent);
         }
         
         .subsection {
             font-family: 'Cormorant Garamond', serif;
             font-size: 28px;
             font-weight: 600;
-            color: #2c2c2c;
+            color: var(--text-dark);
             margin: 30px 0 15px;
             position: relative;
             padding-left: 25px;
@@ -341,14 +316,14 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: #0B6623;
+            background: var(--primary-color);
         }
         
         .subsubsection {
             font-family: 'Cormorant Garamond', serif;
             font-size: 22px;
             font-weight: 600;
-            color: #0B6623;
+            color: var(--primary-color);
             margin: 20px 0 12px;
             position: relative;
             padding-left: 20px;
@@ -362,14 +337,14 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #0B6623;
+            background: var(--primary-color);
             opacity: 0.7;
         }
         
         p {
             font-size: 15px;
             line-height: 1.8;
-            color: #4a4a4a;
+            color: var(--text-medium);
             margin-bottom: 18px;
             text-align: justify;
             font-weight: 400;
@@ -377,7 +352,7 @@
         
         .highlight-box {
             background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
-            border-left: 1px solid #0B6623;
+            border-left: 3px solid var(--primary-color);
             padding: 25px;
             margin: 25px 0;
             border-radius: 0 8px 8px 0;
@@ -388,7 +363,7 @@
             margin: 0;
             font-size: 16px;
             font-weight: 500;
-            color: #2c2c2c;
+            color: var(--text-dark);
         }
         
         .objectives {
@@ -402,12 +377,18 @@
             padding: 12px;
             background: #fafafa;
             border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .objective-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .objective-number {
             min-width: 32px;
             height: 32px;
-            background: linear-gradient(135deg, #0B6623, #0a5c1f);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             border-radius: 50%;
             display: flex;
@@ -422,7 +403,7 @@
             flex: 1;
             font-size: 15px;
             line-height: 1.7;
-            color: #4a4a4a;
+            color: var(--text-medium);
             padding-top: 3px;
         }
         
@@ -442,11 +423,17 @@
         
         .card {
             background: white;
-            border: 1px solid #e8e8e8;
+            border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 20px;
             position: relative;
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .card::before {
@@ -456,13 +443,13 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, #0B6623, #0a5c1f);
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
         }
         
         .card-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #0B6623, #0a5c1f);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -484,7 +471,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 20px;
             font-weight: 700;
-            color: #0B6623;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
         
@@ -505,8 +492,14 @@
             position: relative;
             font-size: 15px;
             line-height: 1.7;
-            color: #4a4a4a;
+            color: var(--text-medium);
             border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .list-elegant li:hover {
+            background-color: rgba(11, 102, 35, 0.03);
+            padding-left: 40px;
         }
         
         .list-elegant li:last-child {
@@ -521,7 +514,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #0B6623;
+            background: var(--primary-color);
             box-shadow: 0 0 0 2px rgba(11, 102, 35, 0.2);
         }
         
@@ -539,6 +532,12 @@
             border-radius: 10px;
             color: white;
             border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         .stat-number {
@@ -561,7 +560,7 @@
         .smart-image {
             width: 100%;
             height: 250px;
-            border: 1px solid #e8e8e8;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             margin: 20px 0;
             position: relative;
@@ -569,6 +568,12 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .smart-image:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .smart-image img {
@@ -578,8 +583,10 @@
         }
         
         .smart-image::before {
-            
+            content: attr(data-title);
             position: absolute;
+            top: 15px;
+            left: 15px;
             background: rgba(11, 102, 35, 0.9);
             color: white;
             padding: 12px 25px;
@@ -590,9 +597,10 @@
         }
         
         .smart-image::after {
-            
+            content: attr(data-description);
             position: absolute;
             bottom: 15px;
+            right: 15px;
             background: rgba(255,255,255,0.95);
             padding: 6px 12px;
             border-radius: 12px;
@@ -615,6 +623,12 @@
             border-radius: 6px;
             position: relative;
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .grid-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .grid-image img {
@@ -628,7 +642,7 @@
             position: absolute;
             top: 8px;
             left: 8px;
-            background: #0B6623;
+            background: var(--primary-color);
             color: white;
             padding: 4px 8px;
             border-radius: 10px;
@@ -641,10 +655,16 @@
             margin: 20px 0;
             padding: 20px;
             background: white;
-            border-left: 1px solid #0B6623;
+            border-left: 3px solid var(--primary-color);
             border-radius: 0 8px 8px 0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.06);
             position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         
         .timeline-item::before {
@@ -654,17 +674,17 @@
             top: 25px;
             width: 18px;
             height: 18px;
-            background: #0B6623;
+            background: var(--primary-color);
             border-radius: 50%;
             border: 3px solid white;
-            box-shadow: 0 0 0 1px #0B6623;
+            box-shadow: 0 0 0 1px var(--primary-color);
         }
         
         .day-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 22px;
             font-weight: 700;
-            color: #0B6623;
+            color: var(--primary-color);
             margin-bottom: 6px;
         }
         
@@ -697,7 +717,7 @@
         /* PAGE DIVIDER */
         .page-divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, #0B6623, transparent);
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
             margin: 30px 0;
             position: relative;
         }
@@ -711,7 +731,22 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #0B6623;
+            background: var(--primary-color);
+        }
+        
+        /* WATERMARK STYLES */
+        .watermark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.08;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70% auto;
         }
         
         @media print {
@@ -729,34 +764,38 @@
 
     <!-- COVER PAGE -->
     <div class="page">
-        <div class="">
-            <img src="/back.jpg" class="cover-image" alt="Turkey Exhibition Kenya Cover">
+        <div class="cover">
+            <img src="back.jpg" class="cover-image" alt="Turkey Exhibition Kenya Cover">
             
-            
-            
-            <div class="cover-center" style="margin-top: 200px;">
-                <div class="cover-year">2026</div>
-                <h1 class="cover-title" style="color:white; margin-top:20px;">Turkish Treasures <br>Expo</h1>
-                <div class="cover-divider"></div>
-                
+            <div class="company-logo">
+                <div class="logo-icon">P</div>
+                <div>Pinamba Investment Group</div>
             </div>
             
-            <!-- Circular Images -->
-           
+            <div class="cover-center">
+                <div class="cover-year">2026</div>
+                <h1 class="cover-title">Turkish Treasures<br>Expo</h1>
+                <div class="cover-subtitle">Kenya</div>
+                <div class="cover-divider"></div>
+                <p class="cover-tagline">A premier showcase of Turkish innovation, creativity, and business opportunities in fashion, textiles, and home décor</p>
+            </div>
             
-            <!-- <div class="cover-bottom" style="margin-top: 400px; margin-left: 30px;">
+            <div class="cover-bottom">
                 <div class="cover-info">
-                    <div><strong>Location</strong>KICC</div>
-                    <div><strong>Duration</strong> Four Days + Safari Experience</div>
-                    <div><strong>Organized By</strong> Pinamba Investment Group of Companies</div>
+                    <div><strong>Location</strong>KICC, Nairobi</div>
+                    <div><strong>Duration</strong>Four Days + Safari Experience</div>
                 </div>
-            </div> -->
+                <div class="cover-info">
+                    <div><strong>Organized By</strong>Pinamba Investment Group of Companies</div>
+                    <div><strong>Date</strong>March 15-18, 2026</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- TABLE OF CONTENTS -->
     <div class="page toc-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 02</div>
         
@@ -837,7 +876,7 @@
 
     <!-- EXECUTIVE SUMMARY -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 03</div>
         
@@ -845,8 +884,8 @@
         
         <p>The Turkey Expo Kenya 2026 is a four-day national event organized by Pinamba Investment Group of Companies, dedicated to showcasing innovation, creativity, and business opportunities in the turkey clothing and material industry.</p>
         
-        <div class="smart-image">
-            <img src="/1.png" alt="Turkey Fashion Collections">
+        <div class="smart-image" data-title="TURKISH FASHION COLLECTIONS" data-description="Contemporary designs blending Turkish and Kenyan aesthetics">
+            <img src="1.png" alt="Turkey Fashion Collections">
         </div>
         
         <p>The expo will bring together manufacturers, designers, traders, investors, and consumers to explore unique fashion, fabric, and decor products inspired by turkey-themed materials including official wear, carpets, and locally designed turkey fabric wear.</p>
@@ -878,7 +917,7 @@
 
     <!-- BACKGROUND AND OBJECTIVES -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 04</div>
         
@@ -888,10 +927,10 @@
         
         <div class="image-grid">
             <div class="grid-image" data-label="TEXTILE PRODUCTION">
-                <img src="/3.png" alt="Textile Production">
+                <img src="3.png" alt="Textile Production">
             </div>
             <div class="grid-image" data-label="DESIGN PROCESS">
-                <img src="/2.png" alt="Design Process">
+                <img src="2.png" alt="Design Process">
             </div>
         </div>
         
@@ -937,7 +976,7 @@
 
     <!-- TURKEY TREASURES MALL -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 05</div>
         
@@ -947,7 +986,7 @@
         <p>The Expo aims to pave the way for Turkey Treasures Mall — a modern retail and exhibition complex in Nairobi focused on turkey clothing, materials, carpets, and crafts.</p>
         
         <div class="smart-image" data-title="TURKEY TREASURES MALL CONCEPT" data-description="Architectural vision for permanent retail and exhibition complex">
-            <img src="/4.jpg" alt="Turkey Treasures Mall Concept">
+            <img src="4.jpg" alt="Turkey Treasures Mall Concept">
         </div>
         
         <h3 class="subsubsection">The mall will serve as:</h3>
@@ -985,7 +1024,7 @@
 
     <!-- SUSTAINABILITY & SKILLS DEVELOPMENT -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 06</div>
         
@@ -1015,7 +1054,7 @@
         </div>
         
         <div class="smart-image" data-title="SUSTAINABLE TEXTILE INNOVATION" data-description="Eco-friendly production methods and sustainable fashion practices">
-            <img src="/5.png" alt="Sustainable Textile Innovation">
+            <img src="5.png" alt="Sustainable Textile Innovation">
         </div>
         
         <h3 class="subsection">Regional Expansion</h3>
@@ -1029,7 +1068,7 @@
 
     <!-- EVENT CONCEPT AND ACTIVITIES -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 07</div>
         
@@ -1038,7 +1077,7 @@
         <p>The Expo will feature a comprehensive program designed to engage all stakeholders across the textile and fashion value chain.</p>
         
         <div class="smart-image" data-title="PREMIUM EXHIBITION SPACE" data-description="Professional booth setups and exhibition hall layout">
-            <img src="/6.jpg" alt="Premium Exhibition Space">
+            <img src="imgi_16_02-Cr1A2Fpq.jpeg" alt="Premium Exhibition Space">
         </div>
         
         <h3 class="subsection">Core Exhibition Activities</h3>
@@ -1073,7 +1112,7 @@
 
     <!-- TARGET AUDIENCE -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 08</div>
         
@@ -1108,7 +1147,7 @@
         </div>
         
         <div class="smart-image" data-title="INDUSTRY NETWORKING" data-description="Business professionals and industry leaders at networking events">
-            <img src="/7.jpg" alt="Industry Networking">
+            <img src="Screenshot (72).png" alt="Industry Networking">
         </div>
         
         <h3 class="subsection">Additional Key Participants</h3>
@@ -1128,7 +1167,7 @@
 
     <!-- MARKETING AND PROMOTION PLAN -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 09</div>
         
@@ -1163,7 +1202,7 @@
         </div>
         
         <div class="smart-image" data-title="MARKETING CAMPAIGN" data-description="Digital and outdoor marketing materials and campaigns">
-            <img src="/8.jpg" alt="Marketing Campaign">
+            <img src="Screenshot (77).png" alt="Marketing Campaign">
         </div>
         
         <h3 class="subsection">Direct Outreach</h3>
@@ -1189,7 +1228,7 @@
 
     <!-- RISK MANAGEMENT -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 10</div>
         
@@ -1224,7 +1263,7 @@
         </div>
         
         <div class="smart-image" data-title="EVENT SAFETY & SECURITY" data-description="Professional security and safety measures implementation">
-            <img src="/9.jpg" alt="Event Safety & Security">
+            <img src="Screenshot (60).png" alt="Event Safety & Security">
         </div>
         
         <h3 class="subsection">Market Risk Mitigation</h3>
@@ -1238,7 +1277,7 @@
 
     <!-- SAFARI NETWORKING TRIP -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 11</div>
         
@@ -1254,7 +1293,7 @@
         </ul>
         
         <div class="smart-image" data-title="MAASAI MARA SAFARI" data-description="Luxury wildlife experience in Kenya's premier game reserve">
-            <img src="/10.jpg" alt="Maasai Mara Safari">
+            <img src="imgi_60_luxury-safari-trips-to-Kenya-820x269.webp" alt="Maasai Mara Safari">
         </div>
         
         <h3 class="subsection">Phase 1: Maasai Mara Safari (2 days, 3 nights)</h3>
@@ -1282,7 +1321,7 @@
 
     <!-- COASTAL EXPERIENCE -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 12</div>
         
@@ -1292,7 +1331,7 @@
         <p>After the safari adventure, guests will experience Kenya's stunning Coastal Region for a relaxing and culturally enriching seaside retreat.</p>
         
         <div class="smart-image" data-title="KENYA'S COASTAL BEAUTY" data-description="Pristine beaches and cultural heritage sites">
-            <img src="/11.jpg" alt="Kenya's Coastal Beauty">
+            <img src="11.jpg" alt="Kenya's Coastal Beauty">
         </div>
         
         <h3 class="subsubsection">Coastal Activities</h3>
@@ -1310,10 +1349,10 @@
         
         <div class="image-grid">
             <div class="grid-image" data-label="BEACH RESORT">
-                <img src="/imgi_14_Hemingways-Watamu-Kenya.webp" alt="Beach Resort">
+                <img src="imgi_14_Hemingways-Watamu-Kenya.webp" alt="Beach Resort">
             </div>
             <div class="grid-image" data-label="DHOW CRUISE">
-                <img src="/imgi_2_Tamarind-Dhow-Dinner-Cruise-Mombasa.jpg" alt="Dhow Cruise">
+                <img src="imgi_2_Tamarind-Dhow-Dinner-Cruise-Mombasa.jpg" alt="Dhow Cruise">
             </div>
         </div>
         
@@ -1325,7 +1364,7 @@
 
     <!-- EVENT ITINERARY -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 13</div>
         
@@ -1365,7 +1404,7 @@
 
     <!-- EVENT ITINERARY CONTINUED -->
     <div class="page content-page">
-        <div class="watermark" style="background-image: url('/watermark.png');"></div>
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
         <div class="page-number">PAGE 14</div>
         
@@ -1397,7 +1436,7 @@
         </div>
         
         <div class="smart-image" data-title="NETWORKING EVENTS" data-description="Business networking and partnership building sessions">
-            <img src="/imgi_56_kenya-luxury-safari-holiday-satao-elerai-amboseli-768x384.jpg" alt="Networking Events">
+            <img src="imgi_56_kenya-luxury-safari-holiday-satao-elerai-amboseli-768x384.jpg" alt="Networking Events">
         </div>
         
         <h3 class="subsection">Complete Experience Package</h3>
@@ -1412,7 +1451,7 @@
     <!-- BACK COVER -->
     <div class="page">
         <div class="cover" style="background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);">
-            <img src="/turkey.jpg" class="cover-image" alt="Turkey Exhibition Back Cover">
+            <img src="turkey.jpg" class="cover-image" alt="Turkey Exhibition Back Cover">
             
             <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 80px; position: relative; z-index: 2;">
                 <div style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: white; margin-bottom: 30px;">Connect With Us</div>
