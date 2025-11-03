@@ -47,6 +47,79 @@
             overflow: hidden;
         }
         
+        /* ENHANCED CIRCULAR GALLERY WITH PERFECT VERTICAL CENTERING */
+        .circular-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
+        .circular-item {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+            border: 8px solid white;
+            background: white;
+        }
+
+        .circular-item:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .circular-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .circular-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .circular-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(11, 102, 35, 0.9));
+            color: white;
+            padding: 20px 15px 15px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .circular-item:hover .circular-caption {
+            transform: translateY(0);
+        }
+
+        .circular-caption h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        .circular-caption p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
         /* CREATIVE IMAGE SHOWCASES */
         .creative-image-showcase {
             position: absolute;
@@ -56,7 +129,8 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
             padding: 50px;
             color: white;
             overflow: hidden;
@@ -87,7 +161,6 @@
             position: relative;
             z-index: 3;
             max-width: 600px;
-            margin: auto;
             text-align: center;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
@@ -112,107 +185,12 @@
             background: linear-gradient(90deg, transparent, white, transparent);
         }
 
-        
-
-.shapedividers_com-4043{
-overflow:hidden;
-position:relative;
-}
-.shapedividers_com-4043::before{ 
-content:'';
-font-family:'shape divider from ShapeDividers.com';
-position: absolute;
-z-index: 3;
-pointer-events: none;
-background-repeat: no-repeat;
-bottom: -0.1vw;
-left: -0.1vw;
-right: -0.1vw;
-top: -0.1vw; 
-background-size: 100% 90px;
-background-position: 50% 0%; 
-transform: rotateY(180deg); background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M0 1c3.17.8 7.29-.38 10.04-.55 2.75-.17 9.25 1.47 12.67 1.3 3.43-.17 4.65-.84 7.05-.87 2.4-.02 5.52.88 5.52.88V0H0z" fill="%23fbd8c2"/></svg>'); 
-}
-
-@media (min-width:2100px){
-.shapedividers_com-4043::before{
-background-size: 100% calc(2vw + 90px);
-}
-}
- 
-
-@media (min-width:2100px){
-.shapedividers_com-9297::before{
-background-size: 100% calc(2vw + 90px);
-}
-}
- 
-        
         .creative-text {
             font-size: 18px;
             line-height: 1.8;
             font-weight: 400;
             color: white;
             margin-bottom: 30px;
-        }
-        
-        /* INNOVATIVE GALLERY DESIGNS */
-        .mosaic-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 10px;
-            height: 100%;
-            padding: 40px;
-        }
-        
-        .mosaic-item {
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .mosaic-item:hover {
-            transform: scale(1.05);
-            z-index: 10;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .mosaic-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .mosaic-item-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        
-        .mosaic-item-tall {
-            grid-row: span 2;
-        }
-        
-        .mosaic-item-wide {
-            grid-column: span 2;
-        }
-        
-        .mosaic-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            padding: 15px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .mosaic-item:hover .mosaic-caption {
-            transform: translateY(0);
         }
         
         /* PARALLAX IMAGE SECTIONS */
@@ -239,6 +217,7 @@ background-size: 100% calc(2vw + 90px);
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             padding: 60px;
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(5px);
@@ -298,7 +277,7 @@ background-size: 100% calc(2vw + 90px);
             transform: translateY(0);
         }
         
-        /* FULL-PAGE IMAGE PAGES - RESTORED */
+        /* FULL-PAGE IMAGE PAGES */
         .full-image-page {
             position: absolute;
             top: 0;
@@ -307,7 +286,8 @@ background-size: 100% calc(2vw + 90px);
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
             padding: 50px;
             color: white;
             overflow: hidden;
@@ -338,7 +318,7 @@ background-size: 100% calc(2vw + 90px);
             position: relative;
             z-index: 3;
             max-width: 500px;
-            margin-top: auto;
+            text-align: center;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         
@@ -401,7 +381,6 @@ background-size: 100% calc(2vw + 90px);
             right: -50%;
             width: 100%;
             height: 100%;
-            /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 1px, transparent 1px); */
             background-size: 30px 30px;
             transform: rotate(-15deg);
             z-index: 3;
@@ -439,6 +418,7 @@ background-size: 100% calc(2vw + 90px);
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             padding: 0;
         }
         
@@ -875,35 +855,35 @@ background-size: 100% calc(2vw + 90px);
             opacity: 0.8;
         }
         /* Split Cover Image Styles */
-.cover-image-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 1;
-}
+        .cover-image-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
 
-.cover-image-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 1;
-}
+        .cover-image-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
 
-/* Ensure cover content stays above images */
-.company-logo,
-.cover-center,
-.cover-bottom {
-    position: relative;
-    z-index: 4;
-}
+        /* Ensure cover content stays above images */
+        .company-logo,
+        .cover-center,
+        .cover-bottom {
+            position: relative;
+            z-index: 4;
+        }
         
         /* SMART IMAGE SYSTEM */
         .smart-image {
@@ -1070,158 +1050,115 @@ background-size: 100% calc(2vw + 90px);
 <body>
 
     <!-- COVER PAGE -->
-<!-- COVER PAGE -->
-<!-- COVER PAGE -->
-<!-- COVER PAGE -->
-<!-- COVER PAGE -->
-<!-- COVER PAGE -->
-<div class="page">
-    <div class="cover">
-        <!-- Upper half image -->
-        <img src="covers.png" class="cover-image-top" alt="Turkey Exhibition Kenya Cover - Top">
-        
-        <!-- Bottom half image -->
-        <img src="mall.png" class="cover-image-bottom shapedividers_com-9297" alt="Turkey Exhibition Kenya Cover - Bottom">
-        
-        <!-- Text overlay for second image -->
-        
-        
-        <div class="company-logo">
+    <div class="page">
+        <div class="cover">
+            <!-- Upper half image -->
+            <img src="covers.png" class="cover-image-top" alt="Turkey Exhibition Kenya Cover - Top">
             
+            <!-- Bottom half image -->
+            <img src="mall.png" class="cover-image-bottom shapedividers_com-9297" alt="Turkey Exhibition Kenya Cover - Bottom">
+            
+            <!-- Text overlay for second image -->
+            
+            <div class="company-logo">
+                
+            </div>
+            
+           
+            
+           
         </div>
-        
-      
-        
-        
     </div>
-</div>
-
 
     <!-- TABLE OF CONTENTS -->
     <div class="page toc-page">
-        <div class="watermark" style="background-image: url('watermark.png');"></div>
-        <div class="page-header"></div>
-        <div class="page-number">PAGE 02</div>
-        
-        <h2 class="toc-title">Table of Contents</h2>
-        
+    <div class="watermark" style="background-image: url('watermark.png');"></div>
+    <div class="page-header"></div>
+    <div class="page-number">ii</div>
+    
+    <h2 class="toc-title">Table of Contents</h2>
+    
+    <div class="event-section">
+        <h3 class="event-section-title">Event I: Exhibition</h3>
         <ul class="toc-list">
             <li class="toc-item">
                 <div><span class="toc-item-main">Executive Summary</span></div>
-                <span class="toc-page-number">03</span>
+                <span class="toc-page-number">iii</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-main">1. Background and Objectives</span></div>
-                <span class="toc-page-number">04</span>
+                <div><span class="toc-item-main">I. Background and Objectives</span></div>
+                <span class="toc-page-number">iv</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-sub">• Core Objectives</span></div>
-                <span class="toc-page-number">05</span>
+                <div><span class="toc-item-sub">A. Objectives</span></div>
+                <span class="toc-page-number">v</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-sub">• Turkey Treasures Mall</span></div>
-                <span class="toc-page-number">06</span>
+                <div><span class="toc-item-sub">B. Proposed Turkey Treasures Mall</span></div>
+                <span class="toc-page-number">vi</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-sub">• Sustainability & Skills Development</span></div>
-                <span class="toc-page-number">07</span>
+                <div><span class="toc-item-sub">C. Sustainability & Skills Development</span></div>
+                <span class="toc-page-number">vii</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-main">2. Event Concept and Activities</span></div>
-                <span class="toc-page-number">08</span>
+                <div><span class="toc-item-main">II. Event Concept and Activities</span></div>
+                <span class="toc-page-number">viii</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-main">3. Target Audience</span></div>
-                <span class="toc-page-number">09</span>
+                <div><span class="toc-item-main">III. Target Audience</span></div>
+                <span class="toc-page-number">ix</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-main">4. Marketing and Promotion Plan</span></div>
-                <span class="toc-page-number">10</span>
+                <div><span class="toc-item-main">IV. Marketing and Promotion Plan</span></div>
+                <span class="toc-page-number">x</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-main">5. Risk Management</span></div>
-                <span class="toc-page-number">11</span>
+                <div><span class="toc-item-main">V. Risk Management</span></div>
+                <span class="toc-page-number">xi</span>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="event-section">
+        <h3 class="event-section-title">Event II: Safari</h3>
+        <ul class="toc-list">
+            <li class="toc-item">
+                <div><span class="toc-item-main">VI. Safari Networking Trip</span></div>
+                <span class="toc-page-number">xii</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-main">6. Safari Networking Trip</span></div>
-                <span class="toc-page-number">12</span>
+                <div><span class="toc-item-sub">A. Maasai Mara Safari</span></div>
+                <span class="toc-page-number">xiii</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-sub">• Maasai Mara Safari</span></div>
-                <span class="toc-page-number">13</span>
+                <div><span class="toc-item-sub">B. Coastal Experience</span></div>
+                <span class="toc-page-number">xiv</span>
             </li>
             
             <li class="toc-item">
-                <div><span class="toc-item-sub">• Coastal Experience</span></div>
-                <span class="toc-page-number">14</span>
-            </li>
-            
-            <li class="toc-item">
-                <div><span class="toc-item-main">7. Event Itinerary</span></div>
-                <span class="toc-page-number">15</span>
-            </li>
-            
-            <!-- NEW SECTIONS IN TOC -->
-            <li class="toc-item">
-                <div><span class="toc-item-main">Turkish Textile Heritage</span></div>
-                <span class="toc-page-number">16</span>
-            </li>
-            
-            <li class="toc-item">
-                <div><span class="toc-item-sub">• Textile Gallery</span></div>
-                <span class="toc-page-number">17</span>
-            </li>
-            
-            <li class="toc-item">
-                <div><span class="toc-item-main">Kenyan Craftsmanship</span></div>
-                <span class="toc-page-number">18</span>
-            </li>
-            
-            <li class="toc-item">
-                <div><span class="toc-item-sub">• Craftsmanship Gallery</span></div>
-                <span class="toc-page-number">19</span>
-            </li>
-            
-            <li class="toc-item">
-                <div><span class="toc-item-main">Fashion Innovation</span></div>
-                <span class="toc-page-number">20</span>
-            </li>
-            
-            <li class="toc-item">
-                <div><span class="toc-item-sub">• Innovation Gallery</span></div>
-                <span class="toc-page-number">21</span>
+                <div><span class="toc-item-main">VII. Event Itinerary</span></div>
+                <span class="toc-page-number">xv</span>
             </li>
         </ul>
-        
-        <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
-            <span>Table of Contents</span>
-        </div>
     </div>
-
-    <div class="page">
-        <div class="creative-image-showcase">
-            <img src="lady.png" class="creative-image" alt="Creative Showcase">
-            
-            <div class="creative-content">
-                <h2 class="creative-title">Merging business with leisure.</h2>
-                <p class="creative-text">In the spirit of aligning with the proverbial tale of one stone that killed two birds,the expo is a platform where we are merging business with leisure.
-We make business connections while wiping sweats at the leisure and pleasure points of Kenya.</p>
-               
-            </div>
-        </div>
-        <div class="page-number">PAGE 15</div>
+    
+    <div class="footer-page">
+        <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment</span>
+        <span>Table of Contents</span>
     </div>
+</div>
 
     <!-- EXECUTIVE SUMMARY -->
     <div class="page content-page">
@@ -1231,22 +1168,18 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         
         <h2 class="section-title">Executive Summary</h2>
         
-        <p>The Turkey Expo Kenya 2026 is a four-day national event organized by Pinamba Investment Group of Companies, dedicated to showcasing innovation, creativity, and business opportunities in the turkey clothing and material industry.</p>
-        
-        <div class="smart-image">
-            <img src="expo.png" alt="Turkey Fashion Collections">
-        </div>
-        
-        <p>The expo will bring together manufacturers, designers, traders, investors, and consumers to explore unique fashion, fabric, and decor products inspired by turkey-themed materials including official wear, carpets, and locally designed turkey fabric wear.</p>
+        <p>Turkey Expo Kenya 2026 is a four day national event organized by Pinamba Investment , bringing together the best of Turkish fashion, décor, and textile innovation. It's where creativity meets opportunity, connecting manufacturers, designers, traders, and investors in one vibrant space to celebrate Turkish elegance and craftsmanship right here in Kenya.
+
+        <br><br>Beyond the exhibition halls awaits an unforgettable adventure. Guests will experience Kenya's breathtaking safaris, from the golden plains of the Maasai Mara to the serene beauty of the coast. It's more than sightseeing, it's a journey through nature, culture, and connection, creating memories that last long after the business deals are done.
+
+        <br><br>In the spirit of one stone killing two birds, the Turkey Expo Kenya 2026 blends business with leisure. We build partnerships, explore new markets, and enjoy Kenya's finest leisure destinations. It's not just an expo, it's an experience where trade meets travel and business meets pleasure.</p>
         
         <div class="highlight-box">
-            <p>This event seeks to create a new market platform for local traders, artisans, and investors to network, exchange knowledge, and build value chains that connect Kenya's growing creative and textile industry with regional and global markets.</p>
+            <p>Even in the face of global economic challenges, the Turkey Expo Kenya 2026 invites you to rediscover opportunity and adventure. You come for business and experience leisure through Kenya's iconic safaris and coastal escapes, where every moment combines discovery, connection, and culture. It's where enterprise meets exploration, proving that growth can be both productive and unforgettable.</p>
         </div>
         
-        
-        
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Executive Summary</span>
         </div>
     </div>
@@ -1305,11 +1238,12 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Background & Objectives</span>
         </div>
     </div>
 
+    <!-- CREATIVE SHOWCASE PAGE -->
     <div class="page">
         <div class="creative-image-showcase">
             <img src="model.png" class="creative-image" alt="Creative Showcase">
@@ -1317,7 +1251,6 @@ We make business connections while wiping sweats at the leisure and pleasure poi
             <div class="creative-content">
                 <h2 class="creative-title">Bringing Turkish Elegance to Kenya</h2>
                 <p class="creative-text">From the heart of Istanbul to the streets of Kenya experiencing Turkish excellence made easy, accessible, and delivered right to you.</p>
-               
             </div>
         </div>
         <div class="page-number">PAGE 15</div>
@@ -1329,15 +1262,15 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         <div class="page-header"></div>
         <div class="page-number">PAGE 05</div>
         
-        <h2 class="section-title">Turkey Treasures Mall</h2>
+        <h2 class="section-title">Proposed Turkey Treasures Mall</h2>
         
-        <h3 class="subsection">Establishment of Turkey Treasures Mall</h3>
-        <p>The Expo aims to pave the way for Turkey Treasures Mall — a modern retail and exhibition complex in Nairobi focused on turkey clothing, materials, carpets, and crafts.</p>
-        
-      <div style="width:100%; display:flex; justify-content:center; align-items:center; overflow:hidden;border-radius: 25px;">
-  <img src="Gemini_Generated_Image_b4ske3b4ske3b4sk.png" alt="Turkey Treasures Mall Concept" style="width:100%; height:auto; object-fit:contain;">
-</div>
+        <p>The Expo aims to pave the way for Turkey Treasures Mall a modern retail and exhibition complex in Nairobi focused on turkey clothing, materials, carpets, and crafts. So far, we have engaged local investors in Kenya as well as investors from Turkey. Both Kenyan and Turkish investors have expressed strong interest in financing the construction of Turkey Mall. During these engagements, several investors from both countries have also shown willingness to establish the mall at any suitable location within Nairobi.
 
+We continue to welcome additional investors who share and support this vision. Ownership of the mall will be structured on a shareholding basis, ensuring equitable participation among all partners.</p>
+        
+        <div style="width:100%; display:flex; justify-content:center; align-items:center; overflow:hidden;border-radius: 25px;">
+            <img src="mallss.png" alt="Turkey Treasures Mall Concept" style="width:100%; height:auto; object-fit:contain;">
+        </div>
         
         <h3 class="subsubsection">The mall will serve as:</h3>
         <div class="grid-2">
@@ -1367,14 +1300,14 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Turkey Treasures Mall</span>
         </div>
     </div>
-     <div class="page">
-        <img src="watermark.png">
+
+    <!-- FULL IMAGE PAGE -->
+    <div class="page">
         <div class="full-image-page">
-            <img src="watermark.png">
             <img src="chair.png" class="full-image" alt="Turkish Textile Heritage">
             
             <div class="image-description">
@@ -1415,31 +1348,31 @@ We make business connections while wiping sweats at the leisure and pleasure poi
                 <p>Engagement with private sector for ethical, sustainable production practices and environmental responsibility.</p>
             </div>
         </div>
-         <div class="card">
+        
+        <div class="card">
             <div class="card-icon"><div class="icon-text">RE</div></div>
-        <h3 class="card-title">Regional Expansion</h3>
-        <p>The Expo will expand to other counties and East African nations to enhance regional trade, cultural exchange, and market access for local producers.</p>
-        </div>
-        <div class="smart-image">
-            <img src="reg.png" alt="Sustainable Textile Innovation">
+            <h3 class="card-title">Regional Expansion</h3>
+            <p>As part of our strategic expansion plan, the expo will extend beyond Nairobi to other counties across Kenya and, eventually, to countries within the East African region. This growth will foster regional trade, innovation exchange, and greater market access for local vendors.</p>
         </div>
         
-        
+        <div class="smart-image" style="width:100%; height:100vh; overflow:hidden;">
+            <img src="easto.png" alt="Sustainable Textile Innovation" style="width:100%; height:100%; object-fit:cover;">
+        </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Sustainability & Skills Development</span>
         </div>
     </div>
 
-      <div class="page">
+    <!-- CREATIVE SHOWCASE PAGE -->
+    <div class="page">
         <div class="creative-image-showcase">
             <img src="food.png" class="creative-image" alt="Creative Showcase">
             
             <div class="creative-content">
                 <h2 class="creative-title">Bringing Turkish Flavors Home</h2>
                 <p class="creative-text">Experience the warmth and richness of authentic Turkish cuisine from sizzling kebabs to sweet baklava. No flights, no imports just the real taste of Turkey, right here at home.</p>
-               
             </div>
         </div>
         <div class="page-number">PAGE 15</div>
@@ -1484,11 +1417,12 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Event Concept & Activities</span>
         </div>
     </div>
 
+    <!-- CREATIVE SHOWCASE PAGE -->
     <div class="page">
         <div class="creative-image-showcase">
             <img src="shoes1.png" class="creative-image" alt="Creative Showcase">
@@ -1496,7 +1430,6 @@ We make business connections while wiping sweats at the leisure and pleasure poi
             <div class="creative-content">
                 <h2 class="creative-title">Turkish Shoes in Kenya</h2>
                 <p class="creative-text">Instead of importing, step into authentic Turkish craftsmanship right here at home. Stylish, comfortable, and timeless Turkish shoes are now made accessible to every Kenyan wardrobe.</p>
-               
             </div>
         </div>
         <div class="page-number">PAGE 15</div>
@@ -1508,7 +1441,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         <div class="page-header"></div>
         <div class="page-number">PAGE 08</div>
         
-        <h2 class="section-title">3. Target Audience</h2>
+        <h2 class="section-title">Target Audience</h2>
         
         <p>The Expo Kenya 2026 is strategically designed to attract key decision-makers and industry professionals across the entire textile and fashion value chain.</p>
         
@@ -1539,7 +1472,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="smart-image">
-            <img src="Screenshot (60).png" alt="Industry Networking">
+            <img src="Gemini_Generated_Image_cl8rozcl8rozcl8r.png" alt="Industry Networking">
         </div>
         
         <h3 class="subsection">Additional Key Participants</h3>
@@ -1552,7 +1485,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </ul>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Target Audience</span>
         </div>
     </div>
@@ -1592,17 +1525,26 @@ We make business connections while wiping sweats at the leisure and pleasure poi
                 <p>Press briefings, media engagements, and influencer collaborations to build buzz and credibility.</p>
             </div>
         </div>
-         <div class="card">
+        
+        <div class="card">
             <div class="card-icon"><div class="icon-text">DO</div></div>
-        <h3 class="card-title">Direct Outreach</h3>
-        <p>Targeted engagement with embassies, business chambers, trade networks, and industry associations to ensure quality participation.</p>
+            <h3 class="card-title">Direct Outreach</h3>
+            <p>Targeted engagement with embassies, business chambers, trade networks, and industry associations to ensure quality participation.</p>
         </div>
         
-        <div class="smart-image">
-            <img src="alt.png" alt="Marketing Campaign">
-        </div>
-        
-       
+      <div class="smart-image" style="position:relative; width:100%; height:100vh; overflow:hidden;">
+  <!-- Blurred background -->
+  <img src="billboard (2).png" 
+       alt="Background Blur" 
+       style="position:absolute; width:100%; height:100%; object-fit:cover; filter:blur(20px) brightness(0.7); transform:scale(1.1); top:0; left:0; z-index:1;">
+  
+  <!-- Main sharp image -->
+  <img src="billboard (2).png" 
+       alt="Marketing Campaign" 
+       style="position:relative; width:100%; height:100%; object-fit:contain; object-position:center; z-index:2;">
+</div>
+
+
         
         <div class="highlight-box">
             <p><strong>Sponsor Benefits:</strong> All sponsors will receive premium branding, recognition, and high visibility across all promotional materials, event spaces, and digital platforms.</p>
@@ -1613,11 +1555,11 @@ We make business connections while wiping sweats at the leisure and pleasure poi
             <li>Greater visibility and market access for local traders and designers</li>
             <li>New strategic partnerships and investment opportunities</li>
             <li>Substantial contribution to economic growth in the creative sector</li>
-            <li>Flagship of Turkey Expo Kenya as an annual premier event</li>
+            <li>Flagship of the proposed Turkey Treasures Mall as an East African centere for Turkey based commercial engagements.</li>
         </ul>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Marketing & Promotion Plan</span>
         </div>
     </div>
@@ -1630,7 +1572,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         
         <h2 class="section-title">5. Risk Management</h2>
         
-        <p>Comprehensive risk management framework to ensure successful event execution and stakeholder protection.</p>
+        <p>A robust risk management framework will be firmly enforced to guarantee flawless event execution and the absolute protection of all stakeholder interests.</p>
         
         <div class="grid-2">
             <div class="card">
@@ -1656,24 +1598,25 @@ We make business connections while wiping sweats at the leisure and pleasure poi
                 <h3 class="card-title">Service Quality Risk</h3>
                 <p>Continuous staff training programs and real-time customer feedback systems to ensure excellence in service delivery.</p>
             </div>
+            
             <div class="card">
-                 <div class="card-icon"><div class="icon-text">MRM</div></div>
-            <h3 class="card-title">Market Risk Mitigation</h3>
-        <p>Diversified service offerings ensuring steady revenue streams even if individual segments experience temporary slowdowns, with contingency planning for market fluctuations.</p>
-        </div>
+                <div class="card-icon"><div class="icon-text">MRM</div></div>
+                <h3 class="card-title">Market Risk Mitigation</h3>
+                <p>Diversified service offerings ensuring steady revenue streams even if individual segments experience temporary slowdowns, with contingency planning for market fluctuations.</p>
+            </div>
         </div>
         
         <div class="smart-image">
-            <img src="Screenshot (72).png" alt="Event Safety & Security">
+            <img src="banners.png" alt="Event Safety & Security">
         </div>
         
-        
-        
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Risk Management</span>
         </div>
     </div>
+
+    <!-- EVENT ITINERARY -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
@@ -1708,7 +1651,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Event Itinerary</span>
         </div>
     </div>
@@ -1746,29 +1689,33 @@ We make business connections while wiping sweats at the leisure and pleasure poi
             </ul>
         </div>
         
-        <div class="smart-image">
-            <img src="imgi_32_kenya-masai-mara.jpg" alt="Networking Events">
-        </div>
-        
-        <h3 class="subsection">Complete Experience Package</h3>
-        <p>8 days total including 4-day exhibition, 3-night Maasai Mara safari, and 2-day coastal retreat—a comprehensive business and cultural immersion program creating lasting partnerships and memories.</p>
+   
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Complete Itinerary</span>
         </div>
     </div>
+
+    <!-- CREATIVE SHOWCASE PAGE -->
     <div class="page">
-        <div class="creative-image-showcase">
-            <img src="Masai Mara Aesthetic.jpeg" class="creative-image" alt="Creative Showcase">
+        <div class="cover">
+            <!-- Upper half image -->
+            <img src="Masai Mara Aesthetic.jpeg" class="cover-image-top" alt="Turkey Exhibition Kenya Cover - Top">
             
-            <div class="creative-content">
-                <h2 class="creative-title"></h2>
-                <p class="creative-text">Where golden savannas meet the wild, the Maasai Mara is home to the Big Five and the Great Migration.</p>
-               
+            <!-- Bottom half image -->
+            <img src="lion.png" class="cover-image-bottom shapedividers_com-9297" alt="Turkey Exhibition Kenya Cover - Bottom">
+            
+            <!-- Text overlay for second image -->
+            
+            <div class="company-logo">
+                
             </div>
+            
+           
+            
+           
         </div>
-        <div class="page-number">PAGE 15</div>
     </div>
 
     <!-- SAFARI NETWORKING TRIP -->
@@ -1788,9 +1735,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
             <li>Build lasting personal relationships that translate into sustained trade partnerships</li>
         </ul>
         
-        <div class="smart-image">
-            <img src="7.jpg" alt="Maasai Mara Safari">
-        </div>
+      
         
         <h3 class="subsection">Maasai Mara Safari (2 days, 3 nights)</h3>
         <p>Guests will embark on a luxury guided safari to the iconic Maasai Mara National Reserve, home of the legendary Big Five.</p>
@@ -1810,10 +1755,12 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Safari Networking Trip</span>
         </div>
     </div>
+
+    <!-- FULL IMAGE PAGE -->
     <div class="page">
         <div class="full-image-page">
             <img src="safari2.png" class="full-image" alt="Turkish Textile Heritage">
@@ -1826,47 +1773,47 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         <div class="page-number">PAGE 16</div>
     </div>
 
-    <!-- GALLERY PAGE 1: TEXTILE GALLERY -->
+    <!-- CIRCULAR GALLERY PAGE 1: TEXTILE GALLERY -->
     <div class="page">
-        <div class="mosaic-gallery">
-            <div class="mosaic-item mosaic-item-large">
+        <div class="circular-gallery">
+            <div class="circular-item">
                 <img src="22.jpg" alt="Traditional Turkish Textiles">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Traditional Patterns</h4>
                     <p>Intricate designs passed through generations</p>
                 </div>
             </div>
-            <div class="mosaic-item">
+            <div class="circular-item">
                 <img src="6.jpg" alt="Weaving">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Weaving Techniques</h4>
                     <p>Traditional methods meet modern innovation</p>
                 </div>
             </div>
-            <div class="mosaic-item mosaic-item-tall">
+            <div class="circular-item">
                 <img src="7.jpg" alt="Design">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Creative Process</h4>
                     <p>From concept to finished product</p>
                 </div>
             </div>
-            <div class="mosaic-item mosaic-item-wide">
+            <div class="circular-item">
                 <img src="8.jpg" alt="Textile Production">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Production Excellence</h4>
                     <p>Quality control and attention to detail</p>
                 </div>
             </div>
-            <div class="mosaic-item">
+            <div class="circular-item">
                 <img src="9.jpg" alt="Sustainability">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Sustainable Practices</h4>
                     <p>Eco-friendly production methods</p>
                 </div>
             </div>
-            <div class="mosaic-item">
+            <div class="circular-item">
                 <img src="10.jpg" alt="Culture">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Cultural Heritage</h4>
                     <p>Preserving traditional techniques</p>
                 </div>
@@ -1913,10 +1860,12 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         
         <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment </span>
             <span>Coastal Experience</span>
         </div>
     </div>
+
+    <!-- FULL IMAGE PAGE -->
     <div class="page">
         <div class="full-image-page">
             <img src="imgi_39_caption.jpg" class="full-image" alt="Kenyan Craftsmanship">
@@ -1929,47 +1878,47 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         <div class="page-number">PAGE 18</div>
     </div>
 
-    <!-- GALLERY PAGE 2: CRAFTSMANSHIP GALLERY -->
+    <!-- CIRCULAR GALLERY PAGE 2: CRAFTSMANSHIP GALLERY -->
     <div class="page">
-        <div class="mosaic-gallery">
-            <div class="mosaic-item mosaic-item-large">
+        <div class="circular-gallery">
+            <div class="circular-item">
                 <img src="imgi_37_caption.jpg" alt="Kenyan Artisans">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Local Artisans</h4>
                     <p>Skilled craftspeople preserving traditions</p>
                 </div>
             </div>
-            <div class="mosaic-item">
+            <div class="circular-item">
                 <img src="sky-turquoise-parasol-sand-relax.jpg" alt="Beadwork">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Beadwork</h4>
                     <p>Intricate traditional bead patterns</p>
                 </div>
             </div>
-            <div class="mosaic-item mosaic-item-tall">
+            <div class="circular-item">
                 <img src="imgi_14_Hemingways-Watamu-Kenya.webp" alt="Weaving">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Traditional Weaving</h4>
                     <p>Handwoven textiles with natural fibers</p>
                 </div>
             </div>
-            <div class="mosaic-item mosaic-item-wide">
+            <div class="circular-item">
                 <img src="imgi_41_caption.jpg" alt="Market">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Local Markets</h4>
                     <p>Vibrant centers of craft and commerce</p>
                 </div>
             </div>
-            <div class="mosaic-item">
+            <div class="circular-item">
                 <img src="imgi_276_kisite-marine-park-private.jpg" alt="Dyeing">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Natural Dyes</h4>
                     <p>Traditional dyeing techniques</p>
                 </div>
             </div>
-            <div class="mosaic-item">
+            <div class="circular-item">
                 <img src="imgi_41_caption.jpg" alt="Patterns">
-                <div class="mosaic-caption">
+                <div class="circular-caption">
                     <h4>Cultural Patterns</h4>
                     <p>Symbolic designs with deep meaning</p>
                 </div>
@@ -1977,6 +1926,8 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         </div>
         <div class="page-number">PAGE 19</div>
     </div>
+
+    <!-- CREATIVE SHOWCASE PAGE -->
     <div class="page">
         <div class="creative-image-showcase">
             <img src="imgi_31_masai-mara-kenya.jpg" class="creative-image" alt="Creative Showcase">
@@ -1984,72 +1935,15 @@ We make business connections while wiping sweats at the leisure and pleasure poi
             <div class="creative-content">
                 <h2 class="creative-title">Experience Kenya Where Warm Hearts Meet Wild Adventures</h2>
                 <p class="creative-text">Feel the pulse of Africa in Kenya, a land where smiles are as radiant as the sunsets. From soulful Swahili welcomes to thrilling safaris and coastal escapes, every journey here blends warmth, wonder, and unforgettable adventure.</p>
-               
             </div>
         </div>
         <div class="page-number">PAGE 15</div>
     </div>
-    <div class="page">
-        <div class="mosaic-gallery">
-            <div class="mosaic-item mosaic-item-large">
-                <img src="imgi_82_AdobeStock_520923107.jpg" alt="Traditional Turkish Textiles">
-                <div class="mosaic-caption">
-                    <h4>Traditional Patterns</h4>
-                    <p>Intricate designs passed through generations</p>
-                </div>
-            </div>
-            <div class="mosaic-item">
-                <img src="imgi_46_PM_07948-1536x1025.jpg" alt="Weaving">
-                <div class="mosaic-caption">
-                    <h4>Weaving Techniques</h4>
-                    <p>Traditional methods meet modern innovation</p>
-                </div>
-            </div>
-            <div class="mosaic-item mosaic-item-tall">
-                <img src="imgi_13_IMG_6251-2048x1207.jpg" alt="Design">
-                <div class="mosaic-caption">
-                    <h4>Creative Process</h4>
-                    <p>From concept to finished product</p>
-                </div>
-            </div>
-            <div class="mosaic-item mosaic-item-wide">
-                <img src="imgi_11_IMG_6296-2048x1208.jpeg" alt="Textile Production">
-                <div class="mosaic-caption">
-                    <h4>Production Excellence</h4>
-                    <p>Quality control and attention to detail</p>
-                </div>
-            </div>
-            <div class="mosaic-item">
-                <img src="imgi_12_DSC_6392-2048x1365.jpeg" alt="Sustainability">
-                <div class="mosaic-caption">
-                    <h4>Sustainable Practices</h4>
-                    <p>Eco-friendly production methods</p>
-                </div>
-            </div>
-            <div class="mosaic-item">
-                <img src="imgi_42_PM_07821-1536x1025.jpg" alt="Culture">
-                <div class="mosaic-caption">
-                    <h4>Cultural Heritage</h4>
-                    <p>Preserving traditional techniques</p>
-                </div>
-            </div>
-        </div>
-        <div class="page-number">PAGE 17</div>
-    </div>
 
-
-    <!-- EVENT ITINERARY -->
+    <!-- CIRCULAR GALLERY PAGE 3: INNOVATION GALLERY -->
     
 
-    <!-- CREATIVE IMAGE SHOWCASE -->
-    
-    <!-- FULL IMAGE PAGE 1: TURKISH TEXTILE HERITAGE -->
-    
-
-    <!-- FULL IMAGE PAGE 2: KENYAN CRAFTSMANSHIP -->
-    
-
-    <!-- FULL IMAGE PAGE 3: FASHION INNOVATION -->
+    <!-- FULL IMAGE PAGE -->
     <div class="page">
         <div class="full-image-page">
             <img src="imgi_37_governors-il-moran-kenya-safari.jpg" class="full-image" alt="Fashion Innovation">
@@ -2062,54 +1956,8 @@ We make business connections while wiping sweats at the leisure and pleasure poi
         <div class="page-number">PAGE 20</div>
     </div>
 
-    <!-- GALLERY PAGE 3: INNOVATION GALLERY -->
-    <div class="page">
-        <div class="mosaic-gallery">
-            <div class="mosaic-item mosaic-item-large">
-                <img src="imgi_33_kenya-maasai-mara.jpg" alt="Fashion Show">
-                <div class="mosaic-caption">
-                    <h4>Runway Innovation</h4>
-                    <p>Contemporary designs with traditional elements</p>
-                </div>
-            </div>
-            <div class="mosaic-item">
-                <img src="imgi_34_masai-mara-luxury-kicheche-camp.jpg" alt="Technology">
-                <div class="mosaic-caption">
-                    <h4>Digital Design</h4>
-                    <p>Technology enhancing creative expression</p>
-                </div>
-            </div>
-            <div class="mosaic-item mosaic-item-tall">
-                <img src="imgi_19_salas-camp-masai-mara.jpg" alt="Sustainable Fashion">
-                <div class="mosaic-caption">
-                    <h4>Sustainable Fashion</h4>
-                    <p>Eco-conscious design practices</p>
-                </div>
-            </div>
-            <div class="mosaic-item mosaic-item-wide">
-                <img src="imgi_4_little-governors-camp.jpg" alt="Textile Innovation">
-                <div class="mosaic-caption">
-                    <h4>Material Innovation</h4>
-                    <p>New fabrics and production techniques</p>
-                </div>
-            </div>
-            <div class="mosaic-item">
-                <img src="imgi_37_governors-il-moran-kenya-safari.jpg" alt="Design Process">
-                <div class="mosaic-caption">
-                    <h4>Creative Process</h4>
-                    <p>From sketch to finished garment</p>
-                </div>
-            </div>
-            <div class="mosaic-item">
-                <img src="imgi_24_mara-serena-safari-lodge.jpg" alt="Fashion Tech">
-                <div class="mosaic-caption">
-                    <h4>Fashion Technology</h4>
-                    <p>Integrating tech with traditional craft</p>
-                </div>
-            </div>
-        </div>
-        <div class="page-number">PAGE 21</div>
-    </div>
+    <!-- CIRCULAR GALLERY PAGE 4: INNOVATION GALLERY -->
+   
 
     <!-- BACK COVER -->
     <div class="page">
@@ -2127,7 +1975,7 @@ We make business connections while wiping sweats at the leisure and pleasure poi
                 </div>
                 
                 <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.2); width: 100%;">
-                    <div style="font-size: 28px; font-family: 'Cormorant Garamond', serif; color: #ffffff; margin-bottom: 15px;">Pinamba Investment Group of Companies</div>
+                    <div style="font-size: 28px; font-family: 'Cormorant Garamond', serif; color: #ffffff; margin-bottom: 15px;">Pinamba Investment  of Companies</div>
                 </div>
             </div>
         </div>
