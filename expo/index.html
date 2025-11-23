@@ -625,7 +625,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(6, 1, 82, 0.8) 0%, rgba(1, 121, 25, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(6, 1, 82, 0.4) 0%, rgba(1, 121, 25, 0.5) 100%);
             z-index: 2;
         }
         
@@ -791,11 +791,12 @@
             object-fit: cover;
         }
         
+        /* ENHANCED TIMELINE WITH ICONS AND SUPER THIN LINES */
         .timeline-item {
-            margin: 20px 0;
-            padding: 20px;
+            margin: 10px 0;
+            padding: 15px;
             background: white;
-            border-left: 5px solid var(--primary-color);
+            border-left: 1px solid var(--primary-color);
             border-radius: 0 10px 10px 0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             position: relative;
@@ -810,14 +811,37 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -12px;
+            left: -10px;
             top: 25px;
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             background: var(--primary-color);
             border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px var(--primary-color);
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 10px;
+            color: white;
+        }
+        
+        .timeline-item.day-1::before {
+            content: '\f02d';
+        }
+        
+        .timeline-item.day-2::before {
+            content: '\f0c0';
+        }
+        
+        .timeline-item.day-3::before {
+            content: '\f007';
+        }
+        
+        .timeline-item.day-4::before {
+            content: '\f2f6';
         }
         
         .day-title {
@@ -836,7 +860,7 @@
         .day-theme {
             font-style: italic;
             color: #888;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-size: 14px;
             font-weight: 500;
         }
@@ -1035,13 +1059,14 @@
             
             <!-- Removed all text elements from the cover -->
         </div>
+        <div class="page-number">1</div>
     </div>
 
     <!-- TABLE OF CONTENTS -->
     <div class="page toc-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">ii</div>
+        <div class="page-number">2</div>
         
         <h2 class="toc-title">Table of Contents</h2>
         
@@ -1050,47 +1075,47 @@
             <ul class="toc-list">
                 <li class="toc-item">
                     <div><span class="toc-item-main">Executive Summary</span></div>
-                    <span class="toc-page-number">iii</span>
+                    <span class="toc-page-number">3</span>
                 </li>
                 
                 <li class="toc-item">
-                    <div><span class="toc-item-main">I. Background and Objectives</span></div>
-                    <span class="toc-page-number">iv</span>
+                    <div><span class="toc-item-main">I. Background and General Objectives</span></div>
+                    <span class="toc-page-number">4</span>
                 </li>
                 
                 <li class="toc-item">
-                    <div><span class="toc-item-sub">A. Objectives</span></div>
-                    <span class="toc-page-number">v</span>
+                    <div><span class="toc-item-sub">A. General Objectives</span></div>
+                    <span class="toc-page-number">5</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">B. Proposed Turkey Treasures Mall</span></div>
-                    <span class="toc-page-number">vi</span>
+                    <span class="toc-page-number">6</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">C. Sustainability & Skills Development</span></div>
-                    <span class="toc-page-number">vii</span>
+                    <span class="toc-page-number">7</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">II. Event Concept and Activities</span></div>
-                    <span class="toc-page-number">viii</span>
+                    <span class="toc-page-number">8</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">III. Target Audience</span></div>
-                    <span class="toc-page-number">ix</span>
+                    <span class="toc-page-number">9</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">IV. Marketing and Promotion Plan</span></div>
-                    <span class="toc-page-number">x</span>
+                    <span class="toc-page-number">10</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">V. Risk Management</span></div>
-                    <span class="toc-page-number">xi</span>
+                    <span class="toc-page-number">11</span>
                 </li>
                 
             </ul>
@@ -1101,22 +1126,22 @@
             <ul class="toc-list">
                 <li class="toc-item">
                     <div><span class="toc-item-main">VI. Safari Networking Trip</span></div>
-                    <span class="toc-page-number">xii</span>
+                    <span class="toc-page-number">12</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">A. Maasai Mara Safari</span></div>
-                    <span class="toc-page-number">xiii</span>
+                    <span class="toc-page-number">13</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">B. Coastal Experience</span></div>
-                    <span class="toc-page-number">xiv</span>
+                    <span class="toc-page-number">14</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">VII. Event Itinerary</span></div>
-                    <span class="toc-page-number">xv</span>
+                    <span class="toc-page-number">15</span>
                 </li>
             </ul>
         </div>
@@ -1131,7 +1156,7 @@
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 03</div>
+        <div class="page-number">3</div>
         
         <h2 class="section-title">Executive Summary</h2>
         
@@ -1151,83 +1176,96 @@
         </div>
     </div>
 
-    <!-- BACKGROUND AND OBJECTIVES -->
-    <div class="page content-page">
-        <div class="watermark" style="background-image: url('watermark.png');"></div>
-        <div class="page-header"></div>
-        <div class="page-number">PAGE 04</div>
-        
-        <h2 class="section-title">1. Background and Objectives</h2>
-        
-        <p>Kenya's fashion and textile industry continues to expand, driven by a rising appreciation for local creativity and quality craftsmanship. However, niche segments like turkey-themed fashion and décor materials remain underrepresented in mainstream markets.</p>
-        
-        <div class="image-grid">
-            <div class="grid-image">
-                <img src="2.png" alt="Textile Production">
-            </div>
-            <div class="grid-image">
-                <img src="women.png" alt="Design Process">
-            </div>
+    <!-- BACKGROUND AND GENERAL OBJECTIVES -->
+<div class="page content-page">
+    <div class="watermark" style="background-image: url('watermark.png');"></div>
+    <div class="page-header"></div>
+    <div class="page-number">4</div>
+    
+    <h2 class="section-title">1. Background and General Objectives</h2>
+    
+    <p>Kenya's fashion and textile industry continues to expand, driven by a rising appreciation for local creativity and quality craftsmanship. However, niche segments like turkey-themed fashion and décor materials remain underrepresented in mainstream markets.</p>
+    
+    <div class="image-grid">
+        <div class="grid-image">
+            <img src="2.png" alt="Textile Production">
         </div>
-        
-        <p>The Turkey Expo Kenya 2026 aims to fill this gap by establishing a premier platform to promote turkey-based clothing, home décor, and textile innovation.</p>
-        
-        <h3 class="subsection">Core Objectives</h3>
-        <div class="objectives">
-            <div class="objective-item">
-                <div class="objective-number">1</div>
-                <div class="objective-text">Promote the turkey clothing and materials industry in Kenya</div>
-            </div>
-            <div class="objective-item">
-                <div class="objective-number">2</div>
-                <div class="objective-text">Create a national platform for local turkey wear traders, manufacturers, and designers</div>
-            </div>
-            <div class="objective-item">
-                <div class="objective-number">3</div>
-                <div class="objective-text">Attract investors and business partners in fashion, textiles, and home décor</div>
-            </div>
-            <div class="objective-item">
-                <div class="objective-number">4</div>
-                <div class="objective-text">Showcase innovations in turkey material production</div>
-            </div>
-            <div class="objective-item">
-                <div class="objective-number">5</div>
-                <div class="objective-text">Stimulate market linkages and partnerships</div>
-            </div>
-            <div class="objective-item">
-                <div class="objective-number">6</div>
-                <div class="objective-text">Highlight technological innovation in textile and apparel</div>
-            </div>
-            <div class="objective-item">
-                <div class="objective-number">7</div>
-                <div class="objective-text">Encourage Kenya-Turkey tech partnerships</div>
-            </div>
-        </div>
-        
-        <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
-            <span>Background & Objectives</span>
+        <div class="grid-image">
+            <img src="women.png" alt="Design Process">
         </div>
     </div>
+    
+    <p>The Turkey Expo Kenya 2026 aims to fill this gap by establishing a premier platform to promote turkey-based clothing, home décor, and textile innovation.</p>
+    
+    <h3 class="subsection">Core Objective</h3>
+    <div class="core-objective">
+        <div class="objective-item highlighted">
+            
+            <div class="objective-text">Establishment and development of proposed Turkey Treasures mall</div>
+        </div>
+    </div>
+    
+    <h3 class="subsection">General Objectives</h3>
+    <div class="objectives">
+        <div class="objective-item">
+            <div class="objective-number">1</div>
+            <div class="objective-text">Establish the Turkey Treasures Mall as a premier retail destination for Turkish products in Kenya</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">2</div>
+            <div class="objective-text">Promote the turkey clothing and materials industry in Kenya</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">3</div>
+            <div class="objective-text">Create a national platform for local turkey wear traders, manufacturers, and designers</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">4</div>
+            <div class="objective-text">Attract investors and business partners in fashion, textiles, and home décor</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">5</div>
+            <div class="objective-text">Showcase innovations in turkey material production</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">6</div>
+            <div class="objective-text">Stimulate market linkages and partnerships</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">7</div>
+            <div class="objective-text">Highlight technological innovation in textile and apparel</div>
+        </div>
+        <div class="objective-item">
+            <div class="objective-number">8</div>
+            <div class="objective-text">Encourage Kenya-Turkey tech partnerships</div>
+        </div>
+    </div>
+    
+    <div class="footer-page">
+        <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+        <span>Background & General Objectives</span>
+    </div>
+</div>
 
     <!-- CREATIVE SHOWCASE PAGE -->
     <div class="page">
         <div class="creative-image-showcase">
-            <img src="model.png" class="creative-image" alt="Creative Showcase">
+            <img src="turkey.png" class="creative-image" alt="Creative Showcase">
             
             <div class="creative-content">
-                <h2 class="creative-title">Bringing Turkish Elegance to Kenya</h2>
-                <p class="creative-text">From the heart of Istanbul to the streets of Kenya, experience Turkish excellence made easy, accessible, and delivered right to you.</p>
+                <h2 class="creative-title">Turkey is no longer miles away, it's here!</h2>
+                <p class="creative-text">Food, fashion, carpets, shoes, culture… all the Turkish goodness without the import hustle or bureaucracy.
+We're bringing Turkey to Nairobi now, and soon.</p>
             </div>
         </div>
-        <div class="page-number">PAGE 05</div>
+        <div class="page-number">5</div>
     </div>
 
     <!-- TURKEY TREASURES MALL -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 06</div>
+        <div class="page-number">6</div>
         
         <h2 class="section-title">Proposed Turkey Treasures Mall</h2>
         
@@ -1274,24 +1312,11 @@
         </div>
     </div>
 
-    <!-- FULL IMAGE PAGE -->
-    <div class="page">
-        <div class="full-image-page">
-            <img src="chair.png" class="full-image" alt="Turkish Textile Heritage">
-            
-            <div class="image-description">
-                <h3 class="image-title">Turkish Elegance at Home</h3>
-                <p class="image-text">Experience the timeless beauty of Turkish furniture where elegant design meets masterful craftsmanship. Each piece tells a story of heritage, detail, and artistry, blending traditional Turkish charm with modern sophistication. Now, that touch of luxury once admired from afar is made accessible to every Kenyan home, transforming your living space into a statement of style, comfort, and cultural elegance.</p>
-            </div>
-        </div>
-        <div class="page-number">PAGE 07</div>
-    </div>
-
     <!-- SUSTAINABILITY & SKILLS DEVELOPMENT -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 08</div>
+        <div class="page-number">7</div>
         
         <h2 class="section-title">Sustainability & Skills Development</h2>
         
@@ -1334,24 +1359,11 @@
         </div>
     </div>
 
-    <!-- CREATIVE SHOWCASE PAGE -->
-    <div class="page">
-        <div class="creative-image-showcase">
-            <img src="food.png" class="creative-image" alt="Creative Showcase">
-            
-            <div class="creative-content">
-                <h2 class="creative-title">Bringing Turkish Flavors Home</h2>
-                <p class="creative-text">Experience the warmth and richness of authentic Turkish cuisine from sizzling kebabs to sweet baklava. No flights, no imports, just the real taste of Turkey, right here at home.</p>
-            </div>
-        </div>
-        <div class="page-number">PAGE 09</div>
-    </div>
-
     <!-- EVENT CONCEPT AND ACTIVITIES -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 10</div>
+        <div class="page-number">8</div>
         
         <h2 class="section-title">2. Event Concept and Activities</h2>
         
@@ -1391,24 +1403,11 @@
         </div>
     </div>
 
-    <!-- CREATIVE SHOWCASE PAGE -->
-    <div class="page">
-        <div class="creative-image-showcase">
-            <img src="shoes1.png" class="creative-image" alt="Creative Showcase">
-            
-            <div class="creative-content">
-                <h2 class="creative-title">Turkish Shoes in Kenya</h2>
-                <p class="creative-text">Instead of importing, step into authentic Turkish craftsmanship right here at home. Stylish, comfortable, and timeless Turkish shoes are now made accessible to every Kenyan wardrobe.</p>
-            </div>
-        </div>
-        <div class="page-number">PAGE 11</div>
-    </div>
-
     <!-- TARGET AUDIENCE -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 12</div>
+        <div class="page-number">9</div>
         
         <h2 class="section-title">Target Audience</h2>
         
@@ -1463,7 +1462,7 @@
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 13</div>
+        <div class="page-number">10</div>
         
         <h2 class="section-title">4. Marketing and Promotion Plan</h2>
         
@@ -1535,7 +1534,7 @@
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 14</div>
+        <div class="page-number">11</div>
         
         <h2 class="section-title">5. Risk Management</h2>
         
@@ -1583,90 +1582,11 @@
         </div>
     </div>
 
-    <!-- EVENT ITINERARY -->
-    <div class="page content-page">
-        <div class="watermark" style="background-image: url('watermark.png');"></div>
-        <div class="page-header"></div>
-        <div class="page-number">PAGE 15</div>
-        
-        <h2 class="section-title">7. Event Itinerary</h2>
-        
-        <p>The Turkey Expo Kenya 2026 is designed to run over four intensive days, combining exhibitions, conferences, product showcases, networking sessions, and cultural experiences.</p>
-        
-        <div class="timeline-item">
-            <h4 class="day-title">Day 1: Opening & Official Launch</h4>
-            <p class="day-theme">Theme: Building Trade Bridges Between Turkey and Kenya</p>
-            <ul class="list-elegant">
-                <li>Grand opening ceremony with dignitaries, government officials, and industry leaders</li>
-                <li>Keynote addresses from Turkish and Kenyan trade representatives</li>
-                <li>Official ribbon-cutting and exhibition hall opening</li>
-                <li>Welcome reception and networking cocktail</li>
-                <li>Evening cultural performance showcasing Turkish and Kenyan traditions</li>
-            </ul>
-        </div>
-        
-        <div class="timeline-item">
-            <h4 class="day-title">Day 2: Business & Investment Forums</h4>
-            <p class="day-theme">Theme: Trade, Innovation, and Market Expansion</p>
-            <ul class="list-elegant">
-                <li>High-level trade forums and investment pitch sessions</li>
-                <li>Panel discussions on textile innovation and digital transformation</li>
-                <li>B2B matchmaking sessions connecting buyers and sellers</li>
-                <li>Technology showcase featuring smart textiles and production innovations</li>
-                <li>Evening gala dinner with awards ceremony</li>
-            </ul>
-        </div>
-        
-        <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
-            <span>Event Itinerary</span>
-        </div>
-    </div>
-
-    <!-- EVENT ITINERARY CONTINUED -->
-    <div class="page content-page">
-        <div class="watermark" style="background-image: url('watermark.png');"></div>
-        <div class="page-header"></div>
-        <div class="page-number">PAGE 16</div>
-        
-        <h2 class="section-title">Event Itinerary</h2>
-        
-        <div class="timeline-item">
-            <h4 class="day-title">Day 3: Consumer & Public Engagement</h4>
-            <p class="day-theme">Theme: Celebrating Culture, Creativity, and Commerce</p>
-            <ul class="list-elegant">
-                <li>Public exhibition day with special consumer offers</li>
-                <li>Fashion shows featuring latest collections from exhibitors</li>
-                <li>Live demonstrations of textile production and design techniques</li>
-                <li>Turkish culinary festival with authentic food tastings</li>
-                <li>Cultural performances and entertainment throughout the day</li>
-            </ul>
-        </div>
-        
-        <div class="timeline-item">
-            <h4 class="day-title">Day 4: Expo Wrap-Up & Closing</h4>
-            <p class="day-theme">Theme: Sustaining Partnerships Beyond the Expo</p>
-            <ul class="list-elegant">
-                <li>Final business meetings and contract signing ceremonies</li>
-                <li>Closing conference on future collaboration opportunities</li>
-                <li>Presentation of Turkey Treasures Mall development plans</li>
-                <li>Distribution of participation certificates and recognition awards</li>
-                <li>Closing ceremony and farewell addresses</li>
-                <li>Preparation for safari departure</li>
-            </ul>
-        </div>
-        
-        <div class="footer-page">
-            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
-            <span>Complete Itinerary</span>
-        </div>
-    </div>
-
     <!-- SAFARI NETWORKING TRIP -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 17</div>
+        <div class="page-number">12</div>
         
         <h2 class="section-title">6. Safari Networking Trip</h2>
         
@@ -1713,6 +1633,7 @@
             
             <!-- Removed all text elements from the cover -->
         </div>
+        <div class="page-number">13</div>
     </div>
 
     <!-- FULL IMAGE PAGE -->
@@ -1725,9 +1646,9 @@
                 <p class="image-text">A land of untamed beauty and majestic wildlife, where lions roam the savannah, elephants stride with grace, and adventure meets the soul of Africa.</p>
             </div>
         </div>
-        <div class="page-number">PAGE 18</div>
+        <div class="page-number">14</div>
     </div>
-     <div class="page">
+    <div class="page">
         <div class="creative-image-showcase">
             <img src="COLLAGE1.png" class="creative-image" alt="Creative Showcase">
             
@@ -1736,14 +1657,14 @@
                 <p class="creative-text">Feel the pulse of Africa in Kenya, a land where smiles are as radiant as the sunsets. From soulful Swahili welcomes to thrilling safaris and coastal escapes, every journey here blends warmth, wonder, and unforgettable adventure.</p>
             </div>
         </div>
-        <div class="page-number">PAGE 21</div>
+        <div class="page-number">18</div>
     </div>
 
     <!-- COASTAL EXPERIENCE -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">PAGE 19</div>
+        <div class="page-number">15</div>
         
         <h2 class="section-title">Coastal Experience</h2>
         
@@ -1781,9 +1702,7 @@
             <span>Coastal Experience</span>
         </div>
     </div>
-
-    <!-- FULL IMAGE PAGE -->
-    <div class="page">
+      <div class="page">
         <div class="full-image-page">
             <img src="COLLAGE2.png" class="full-image" alt="Kenyan Craftsmanship">
             
@@ -1792,8 +1711,93 @@
                 <p class="image-text">Explore vibrant coral reefs, snorkel with tropical fish, or take a deep-sea diving trip along the Indian Ocean.</p>
             </div>
         </div>
-        <div class="page-number">PAGE 20</div>
+        <div class="page-number">19</div>
     </div>
+
+    <!-- EVENT ITINERARY -->
+    <div class="page content-page">
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
+        <div class="page-header"></div>
+        <div class="page-number">16</div>
+        
+        <h2 class="section-title">7. Event Itinerary</h2>
+        
+        <p>The Turkey Expo Kenya 2026 is designed to run over four intensive days, combining exhibitions, conferences, product showcases, networking sessions, and cultural experiences.</p>
+        
+        <div class="timeline-item day-1">
+            <h4 class="day-title">Day 1: Opening & Official Launch</h4>
+            <p class="day-theme">Theme: Building Trade Bridges Between Turkey and Kenya</p>
+            <ul class="list-elegant">
+                <li>Grand opening ceremony with dignitaries, government officials, and industry leaders</li>
+                <li>Keynote addresses from Turkish and Kenyan trade representatives</li>
+                <li>Official ribbon-cutting and exhibition hall opening</li>
+                <li>Welcome reception and networking cocktail</li>
+                <li>Evening cultural performance showcasing Turkish and Kenyan traditions</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item day-2">
+            <h4 class="day-title">Day 2: Business & Investment Forums</h4>
+            <p class="day-theme">Theme: Trade, Innovation, and Market Expansion</p>
+            <ul class="list-elegant">
+                <li>High-level trade forums and investment pitch sessions</li>
+                <li>Panel discussions on textile innovation and digital transformation</li>
+                <li>B2B matchmaking sessions connecting buyers and sellers</li>
+                <li>Technology showcase featuring smart textiles and production innovations</li>
+                <li>Evening gala dinner with awards ceremony</li>
+            </ul>
+        </div>
+        
+        <div class="footer-page">
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span>Event Itinerary</span>
+        </div>
+    </div>
+
+    <!-- EVENT ITINERARY CONTINUED -->
+    <div class="page content-page">
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
+        <div class="page-header"></div>
+        <div class="page-number">17</div>
+        
+        <h2 class="section-title">Event Itinerary</h2>
+        
+        <div class="timeline-item day-3">
+            <h4 class="day-title">Day 3: Consumer & Public Engagement</h4>
+            <p class="day-theme">Theme: Celebrating Culture, Creativity, and Commerce</p>
+            <ul class="list-elegant">
+                <li>Public exhibition day with special consumer offers</li>
+                <li>Fashion shows featuring latest collections from exhibitors</li>
+                <li>Live demonstrations of textile production and design techniques</li>
+                <li>Turkish culinary festival with authentic food tastings</li>
+                <li>Cultural performances and entertainment throughout the day</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item day-4">
+            <h4 class="day-title">Day 4: Expo Wrap-Up & Closing</h4>
+            <p class="day-theme">Theme: Sustaining Partnerships Beyond the Expo</p>
+            <ul class="list-elegant">
+                <li>Final business meetings and contract signing ceremonies</li>
+                <li>Closing conference on future collaboration opportunities</li>
+                <li>Presentation of Turkey Treasures Mall development plans</li>
+                <li>Distribution of participation certificates and recognition awards</li>
+                <li>Closing ceremony and farewell addresses</li>
+                <li>Preparation for safari departure</li>
+            </ul>
+        </div>
+        
+        <div class="footer-page">
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span>Complete Itinerary</span>
+        </div>
+    </div>
+
+    <!-- CREATIVE SHOWCASE PAGE -->
+    
+
+    <!-- FULL IMAGE PAGE -->
+  
 
     <!-- BACK COVER -->
     <div class="page">
@@ -1818,11 +1822,12 @@
                 </div>
                 
                 <div class="company-footer">
-                    <div class="company-name">Pinamba Investment Group</div>
+                    <div class="company-name">Organized By: Pinamba Investment Ltd</div>
                     <div style="color: rgba(255,255,255,0.7); font-size: 14px;">Building Bridges Between Turkey and Kenya</div>
                 </div>
             </div>
         </div>
+        <div class="page-number">20</div>
     </div>
 
 </body>
