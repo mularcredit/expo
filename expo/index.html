@@ -639,7 +639,7 @@
             background: rgba(255,255,255,0.15);
             border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(0px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
         
@@ -723,7 +723,7 @@
             background: rgba(255,255,255,0.15);
             border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(0px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
         
@@ -1044,29 +1044,30 @@
                 box-shadow: none;
             }
         }
+        
+        /* Hide page numbers on cover pages */
+        .cover-page .page-number,
+        .back-cover-page .page-number {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-    <!-- COVER PAGE -->
-    <div class="page">
+    <!-- FRONT COVER (NO PAGE NUMBER) -->
+    <div class="page cover-page">
         <div class="cover">
-            <!-- Upper half image -->
             <img src="covers.png" class="cover-image-top" alt="Turkey Exhibition Kenya Cover - Top">
-            
-            <!-- Bottom half image -->
             <img src="mall.png" class="cover-image-bottom" alt="Turkey Exhibition Kenya Cover - Bottom">
-            
-            <!-- Removed all text elements from the cover -->
         </div>
-        <div class="page-number">1</div>
+        <!-- No page number on cover -->
     </div>
 
-    <!-- TABLE OF CONTENTS -->
+    <!-- TABLE OF CONTENTS (PAGE 1) -->
     <div class="page toc-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">2</div>
+        <div class="page-number">1</div>
         
         <h2 class="toc-title">Table of Contents</h2>
         
@@ -1075,47 +1076,47 @@
             <ul class="toc-list">
                 <li class="toc-item">
                     <div><span class="toc-item-main">Executive Summary</span></div>
-                    <span class="toc-page-number">3</span>
+                    <span class="toc-page-number">2</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">I. Background and General Objectives</span></div>
-                    <span class="toc-page-number">4</span>
+                    <span class="toc-page-number">3</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">A. General Objectives</span></div>
-                    <span class="toc-page-number">5</span>
+                    <span class="toc-page-number">4</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">B. Proposed Turkey Treasures Mall</span></div>
-                    <span class="toc-page-number">6</span>
+                    <span class="toc-page-number">5</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">C. Sustainability & Skills Development</span></div>
-                    <span class="toc-page-number">7</span>
+                    <span class="toc-page-number">6</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">II. Event Concept and Activities</span></div>
-                    <span class="toc-page-number">8</span>
+                    <span class="toc-page-number">7</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">III. Target Audience</span></div>
-                    <span class="toc-page-number">9</span>
+                    <span class="toc-page-number">8</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">IV. Marketing and Promotion Plan</span></div>
-                    <span class="toc-page-number">10</span>
+                    <span class="toc-page-number">9</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">V. Risk Management</span></div>
-                    <span class="toc-page-number">11</span>
+                    <span class="toc-page-number">10</span>
                 </li>
                 
             </ul>
@@ -1126,22 +1127,22 @@
             <ul class="toc-list">
                 <li class="toc-item">
                     <div><span class="toc-item-main">VI. Safari Networking Trip</span></div>
-                    <span class="toc-page-number">12</span>
+                    <span class="toc-page-number">11</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">A. Maasai Mara Safari</span></div>
-                    <span class="toc-page-number">13</span>
+                    <span class="toc-page-number">12</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-sub">B. Coastal Experience</span></div>
-                    <span class="toc-page-number">14</span>
+                    <span class="toc-page-number">13</span>
                 </li>
                 
                 <li class="toc-item">
                     <div><span class="toc-item-main">VII. Event Itinerary</span></div>
-                    <span class="toc-page-number">15</span>
+                    <span class="toc-page-number">14</span>
                 </li>
             </ul>
         </div>
@@ -1152,11 +1153,11 @@
         </div>
     </div>
 
-    <!-- EXECUTIVE SUMMARY -->
+    <!-- EXECUTIVE SUMMARY (PAGE 2) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">3</div>
+        <div class="page-number">2</div>
         
         <h2 class="section-title">Executive Summary</h2>
         
@@ -1176,78 +1177,77 @@
         </div>
     </div>
 
-    <!-- BACKGROUND AND GENERAL OBJECTIVES -->
-<div class="page content-page">
-    <div class="watermark" style="background-image: url('watermark.png');"></div>
-    <div class="page-header"></div>
-    <div class="page-number">4</div>
-    
-    <h2 class="section-title">1. Background and General Objectives</h2>
-    
-    <p>Kenya's fashion and textile industry continues to expand, driven by a rising appreciation for local creativity and quality craftsmanship. However, niche segments like turkey-themed fashion and décor materials remain underrepresented in mainstream markets.</p>
-    
-    <div class="image-grid">
-        <div class="grid-image">
-            <img src="2.png" alt="Textile Production">
+    <!-- BACKGROUND AND GENERAL OBJECTIVES (PAGE 3) -->
+    <div class="page content-page">
+        <div class="watermark" style="background-image: url('watermark.png');"></div>
+        <div class="page-header"></div>
+        <div class="page-number">3</div>
+        
+        <h2 class="section-title">1. Background and General Objectives</h2>
+        
+        <p>Kenya's fashion and textile industry continues to expand, driven by a rising appreciation for local creativity and quality craftsmanship. However, niche segments like turkey-themed fashion and décor materials remain underrepresented in mainstream markets.</p>
+        
+        <div class="image-grid">
+            <div class="grid-image">
+                <img src="2.png" alt="Textile Production">
+            </div>
+            <div class="grid-image">
+                <img src="women.png" alt="Design Process">
+            </div>
         </div>
-        <div class="grid-image">
-            <img src="women.png" alt="Design Process">
+        
+        <p>The Turkey Expo Kenya 2026 aims to fill this gap by establishing a premier platform to promote turkey-based clothing, home décor, and textile innovation.</p>
+        
+        <h3 class="subsection">Core Objective</h3>
+        <div class="core-objective">
+            <div class="objective-item highlighted">
+                <div class="objective-text">Establishment and development of proposed Turkey Treasures mall</div>
+            </div>
+        </div>
+        
+        <h3 class="subsection">General Objectives</h3>
+        <div class="objectives">
+            <div class="objective-item">
+                <div class="objective-number">1</div>
+                <div class="objective-text">Establish the Turkey Treasures Mall as a premier retail destination for Turkish products in Kenya</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">2</div>
+                <div class="objective-text">Promote the turkey clothing and materials industry in Kenya</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">3</div>
+                <div class="objective-text">Create a national platform for local turkey wear traders, manufacturers, and designers</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">4</div>
+                <div class="objective-text">Attract investors and business partners in fashion, textiles, and home décor</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">5</div>
+                <div class="objective-text">Showcase innovations in turkey material production</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">6</div>
+                <div class="objective-text">Stimulate market linkages and partnerships</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">7</div>
+                <div class="objective-text">Highlight technological innovation in textile and apparel</div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-number">8</div>
+                <div class="objective-text">Encourage Kenya-Turkey tech partnerships</div>
+            </div>
+        </div>
+        
+        <div class="footer-page">
+            <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
+            <span>Background & General Objectives</span>
         </div>
     </div>
-    
-    <p>The Turkey Expo Kenya 2026 aims to fill this gap by establishing a premier platform to promote turkey-based clothing, home décor, and textile innovation.</p>
-    
-    <h3 class="subsection">Core Objective</h3>
-    <div class="core-objective">
-        <div class="objective-item highlighted">
-            
-            <div class="objective-text">Establishment and development of proposed Turkey Treasures mall</div>
-        </div>
-    </div>
-    
-    <h3 class="subsection">General Objectives</h3>
-    <div class="objectives">
-        <div class="objective-item">
-            <div class="objective-number">1</div>
-            <div class="objective-text">Establish the Turkey Treasures Mall as a premier retail destination for Turkish products in Kenya</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">2</div>
-            <div class="objective-text">Promote the turkey clothing and materials industry in Kenya</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">3</div>
-            <div class="objective-text">Create a national platform for local turkey wear traders, manufacturers, and designers</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">4</div>
-            <div class="objective-text">Attract investors and business partners in fashion, textiles, and home décor</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">5</div>
-            <div class="objective-text">Showcase innovations in turkey material production</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">6</div>
-            <div class="objective-text">Stimulate market linkages and partnerships</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">7</div>
-            <div class="objective-text">Highlight technological innovation in textile and apparel</div>
-        </div>
-        <div class="objective-item">
-            <div class="objective-number">8</div>
-            <div class="objective-text">Encourage Kenya-Turkey tech partnerships</div>
-        </div>
-    </div>
-    
-    <div class="footer-page">
-        <span class="footer-company">Turkey Exhibition Kenya 2026 | Pinamba Investment Group</span>
-        <span>Background & General Objectives</span>
-    </div>
-</div>
 
-    <!-- CREATIVE SHOWCASE PAGE -->
+    <!-- CREATIVE SHOWCASE PAGE (PAGE 4) -->
     <div class="page">
         <div class="creative-image-showcase">
             <img src="turkey.png" class="creative-image" alt="Creative Showcase">
@@ -1255,17 +1255,17 @@
             <div class="creative-content">
                 <h2 class="creative-title">Turkey is no longer miles away, it's here!</h2>
                 <p class="creative-text">Food, fashion, carpets, shoes, culture… all the Turkish goodness without the import hustle or bureaucracy.
-We're bringing Turkey to Nairobi now, and soon.</p>
+    We're bringing Turkey to Nairobi now, and soon.</p>
             </div>
         </div>
-        <div class="page-number">5</div>
+        <div class="page-number">4</div>
     </div>
 
-    <!-- TURKEY TREASURES MALL -->
+    <!-- TURKEY TREASURES MALL (PAGE 5) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">6</div>
+        <div class="page-number">5</div>
         
         <h2 class="section-title">Proposed Turkey Treasures Mall</h2>
         
@@ -1312,11 +1312,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- SUSTAINABILITY & SKILLS DEVELOPMENT -->
+    <!-- SUSTAINABILITY & SKILLS DEVELOPMENT (PAGE 6) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">7</div>
+        <div class="page-number">6</div>
         
         <h2 class="section-title">Sustainability & Skills Development</h2>
         
@@ -1359,11 +1359,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- EVENT CONCEPT AND ACTIVITIES -->
+    <!-- EVENT CONCEPT AND ACTIVITIES (PAGE 7) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">8</div>
+        <div class="page-number">7</div>
         
         <h2 class="section-title">2. Event Concept and Activities</h2>
         
@@ -1403,11 +1403,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- TARGET AUDIENCE -->
+    <!-- TARGET AUDIENCE (PAGE 8) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">9</div>
+        <div class="page-number">8</div>
         
         <h2 class="section-title">Target Audience</h2>
         
@@ -1458,11 +1458,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- MARKETING AND PROMOTION PLAN -->
+    <!-- MARKETING AND PROMOTION PLAN (PAGE 9) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">10</div>
+        <div class="page-number">9</div>
         
         <h2 class="section-title">4. Marketing and Promotion Plan</h2>
         
@@ -1530,11 +1530,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- RISK MANAGEMENT -->
+    <!-- RISK MANAGEMENT (PAGE 10) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">11</div>
+        <div class="page-number">10</div>
         
         <h2 class="section-title">5. Risk Management</h2>
         
@@ -1582,11 +1582,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- SAFARI NETWORKING TRIP -->
+    <!-- SAFARI NETWORKING TRIP (PAGE 11) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">12</div>
+        <div class="page-number">11</div>
         
         <h2 class="section-title">6. Safari Networking Trip</h2>
         
@@ -1622,7 +1622,7 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- RESTORED IMAGE PAGE BEFORE "HOME OF THE BIG FIVE" -->
+    <!-- RESTORED IMAGE PAGE BEFORE "HOME OF THE BIG FIVE" (PAGE 12) -->
     <div class="page">
         <div class="cover">
             <!-- Upper half image -->
@@ -1630,23 +1630,21 @@ We're bringing Turkey to Nairobi now, and soon.</p>
             
             <!-- Bottom half image -->
             <img src="WhatsApp Image 2025-11-04 at 14.36.06_30dc3083.jpg" class="cover-image-bottom" alt="Wildlife Experience">
-            
-            <!-- Removed all text elements from the cover -->
         </div>
-        <div class="page-number">13</div>
+        <div class="page-number">12</div>
     </div>
 
-    <!-- FULL IMAGE PAGE -->
+    <!-- FULL IMAGE PAGE (PAGE 13) -->
     <div class="page">
         <div class="full-image-page">
-            <img src="WhatsApp Image 2025-11-04 at 14.36.06_eb422bfb.jpg" class="full-image" alt="Home of the Big Five">
+            <img src="Gemini_Generated_Image_lwtfptlwtfptlwtf.png" class="full-image" alt="Home of the Big Five">
             
             <div class="image-description">
                 <h3 class="image-title">Home of the Big Five</h3>
                 <p class="image-text">A land of untamed beauty and majestic wildlife, where lions roam the savannah, elephants stride with grace, and adventure meets the soul of Africa.</p>
             </div>
         </div>
-        <div class="page-number">14</div>
+        <div class="page-number">13</div>
     </div>
     <div class="page">
         <div class="creative-image-showcase">
@@ -1657,14 +1655,14 @@ We're bringing Turkey to Nairobi now, and soon.</p>
                 <p class="creative-text">Feel the pulse of Africa in Kenya, a land where smiles are as radiant as the sunsets. From soulful Swahili welcomes to thrilling safaris and coastal escapes, every journey here blends warmth, wonder, and unforgettable adventure.</p>
             </div>
         </div>
-        <div class="page-number">18</div>
+        <div class="page-number">17</div>
     </div>
 
-    <!-- COASTAL EXPERIENCE -->
+    <!-- COASTAL EXPERIENCE (PAGE 14) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">15</div>
+        <div class="page-number">14</div>
         
         <h2 class="section-title">Coastal Experience</h2>
         
@@ -1702,23 +1700,12 @@ We're bringing Turkey to Nairobi now, and soon.</p>
             <span>Coastal Experience</span>
         </div>
     </div>
-      <div class="page">
-        <div class="full-image-page">
-            <img src="COLLAGE2.png" class="full-image" alt="Kenyan Craftsmanship">
-            
-            <div class="image-description">
-                <h3 class="image-title">Dive into Adventure</h3>
-                <p class="image-text">Explore vibrant coral reefs, snorkel with tropical fish, or take a deep-sea diving trip along the Indian Ocean.</p>
-            </div>
-        </div>
-        <div class="page-number">19</div>
-    </div>
 
-    <!-- EVENT ITINERARY -->
+    <!-- EVENT ITINERARY (PAGE 15) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">16</div>
+        <div class="page-number">15</div>
         
         <h2 class="section-title">7. Event Itinerary</h2>
         
@@ -1754,11 +1741,11 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- EVENT ITINERARY CONTINUED -->
+    <!-- EVENT ITINERARY CONTINUED (PAGE 16) -->
     <div class="page content-page">
         <div class="watermark" style="background-image: url('watermark.png');"></div>
         <div class="page-header"></div>
-        <div class="page-number">17</div>
+        <div class="page-number">16</div>
         
         <h2 class="section-title">Event Itinerary</h2>
         
@@ -1793,14 +1780,24 @@ We're bringing Turkey to Nairobi now, and soon.</p>
         </div>
     </div>
 
-    <!-- CREATIVE SHOWCASE PAGE -->
+    <!-- CREATIVE SHOWCASE PAGE (PAGE 17) -->
     
 
-    <!-- FULL IMAGE PAGE -->
-  
-
-    <!-- BACK COVER -->
+    <!-- FULL IMAGE PAGE (PAGE 18) -->
     <div class="page">
+        <div class="full-image-page">
+            <img src="COLLAGE2.png" class="full-image" alt="Kenyan Craftsmanship">
+            
+            <div class="image-description">
+                <h3 class="image-title">Dive into Adventure</h3>
+                <p class="image-text">Explore vibrant coral reefs, snorkel with tropical fish, or take a deep-sea diving trip along the Indian Ocean.</p>
+            </div>
+        </div>
+        <div class="page-number">18</div>
+    </div>
+
+    <!-- BACK COVER (NO PAGE NUMBER) -->
+    <div class="page back-cover-page">
         <div class="back-cover">
             <img src="imgi_130_630cbf66f41dc.jpg" class="back-cover-image" alt="Turkey Exhibition Back Cover">
             
@@ -1827,7 +1824,7 @@ We're bringing Turkey to Nairobi now, and soon.</p>
                 </div>
             </div>
         </div>
-        <div class="page-number">20</div>
+        <!-- No page number on back cover -->
     </div>
 
 </body>
